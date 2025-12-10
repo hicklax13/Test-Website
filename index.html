@@ -10,6 +10,8 @@
             --text-color: #333;
             --accent-color: #0f172a; /* Dark Navy for PE Professionalism */
             --link-color: #2563eb;
+            --img-border: 4px solid #2563eb;
+            --img-shadow: 0 0 0 6px #f8f9fa, 0 2px 8px rgba(0,0,0,0.08);
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -28,6 +30,19 @@
             margin-bottom: 50px;
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .profile-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border: var(--img-border);
+            border-radius: 16px;
+            box-shadow: var(--img-shadow);
+            background: #fff;
+            margin-left: 24px;
         }
         /* Main Visual Header */
         h1 { margin: 0; font-size: 2.8rem; color: var(--accent-color); letter-spacing: -0.5px; }
@@ -78,9 +93,12 @@
 
 <div class="container">
     <header>
-        <h1>Connor B. Hickey</h1>
-        <div class="subtitle">Private Equity Associate | MSF Candidate | Financial Engineer</div>
-        <p style="margin-top: 15px; color: #666;">Greater New York City Area</p>
+        <div>
+            <h1>Connor B. Hickey</h1>
+            <div class="subtitle">Private Equity Associate | MSF Candidate | Financial Engineer</div>
+            <p style="margin-top: 15px; color: #666;">Greater New York City Area</p>
+        </div>
+        <img src="profile.jpg" alt="Profile" class="profile-img" />
     </header>
 
     <div class="section">
